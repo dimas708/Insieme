@@ -1,0 +1,66 @@
+{
+  "name": "Insieme",
+  "short_name": "Insieme",
+  "description": "Insieme is catalogue restaurant built for you to have good food 'cause the good food is happines",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#db2a2a",
+  "icons": [
+
+    {
+      "src": "/icons/icon-16x16.png",
+      "sizes": "16x16",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-72x72.ico",
+      "sizes": "72x72",
+      "type": "image/ico",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-96x96.ico",
+      "sizes": "96x96",
+      "type": "image/ico",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-128x128.ico",
+      "sizes": "128x128",
+      "type": "image/ico",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-144x144.ico",
+      "sizes": "144x144",
+      "type": "image/ico",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-152x152.ico",
+      "sizes": "152x152",
+      "type": "image/ico",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icons/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
