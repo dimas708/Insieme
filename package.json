@@ -1,6 +1,6 @@
 {
   "name": "insieme",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "this catalogue is build for submission dicoding",
   "main": "index.js",
   "scripts": {
