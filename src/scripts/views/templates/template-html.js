@@ -2,14 +2,14 @@
 import CONFIG from '../../globals/config';
 
 const restaurantItemTemplate = (restaurant) => {
-
+  const firstBox = (numbIndex) => numbIndex === 0 && lastIndex % 3 !== 0;
   return `
-  <div class="card">
+  <div class="card ${firstBox(index) ? 'box-ganjil' : ''}">
     <a href="#/detail/${restaurant.id}">
       <div class="img-container">
         <img class="card-image" alt="${restaurant.name}" src="${
     CONFIG.BASE_IMAGE_URL + restaurant.pictureId
-  }" crossorigin="anonymous"/>
+  }"/>
         <span class="card-title">${restaurant.name} - ${restaurant.city}</span>
         <span class="card-rating">
           <i title="ratings" class="fa fa-star"></i>
@@ -18,7 +18,7 @@ const restaurantItemTemplate = (restaurant) => {
       </div>
       <div class="card-content">
           <p class="card-content-title">Description :</p>
-          <p class="truncate">${restaurant.description}</p>
+          <p class="truncate${firstBox(index) ? '2' : ''}">${restaurant.description}</p>
       </div>
     </a>
   </div>
@@ -31,7 +31,7 @@ const restaurantDetailTemplate = (restaurant) => `
       <div>
         <img class="img-res2" alt="${restaurant.name}" src="${
   CONFIG.BASE_IMAGE_URL + restaurant.pictureId
-}" crossorigin="anonymous"/>
+}"/>
       </div>
     </div>
     <ul class="detail-info">
@@ -85,7 +85,7 @@ const restaurantDetailTemplate = (restaurant) => `
           `
           <div class="detail-review-item">
             <div class="review-header">
-              <p class="review-name"><i title="restaurant" class="fa fa-user-circle" style="font-size:1.3em;"></i>&nbsp;${review.name}</p>
+              <p class="review-name"><i title="restaurant" class="fa fa-user-circle"></i>${review.name}</p>
               <p class="review-date">${review.date}</p>
             </div>
             <div class="review-body">

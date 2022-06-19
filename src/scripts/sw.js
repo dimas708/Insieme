@@ -18,12 +18,11 @@ import {
   ExpirationPlugin
 } from 'workbox-expiration';
 import {
-  skipWaiting,
   clientsClaim,
   setCacheNameDetails
 } from 'workbox-core';
 
-skipWaiting();
+
 clientsClaim();
 
 setCacheNameDetails({
