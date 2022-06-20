@@ -25,8 +25,9 @@ const Home = {
 
     try {
       const data = await RestaurantSource.getListRestaurant();
-      data.restaurants.forEach((restaurant) => {
-        listContainer.innerHTML += restaurantItemTemplate(restaurant);
+      const totalRest = data.restaurants.length;
+      data.restaurants.forEach((restaurant, index) => {
+        listContainer.innerHTML += restaurantItemTemplate(restaurant, index, totalRest);
       });
       mainContainer.style.display = 'block';
       loading.style.display = 'none';

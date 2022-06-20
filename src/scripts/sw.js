@@ -76,7 +76,7 @@ registerRoute(
 );
 
 registerRoute(
-  new RegExp('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css'),
+  new RegExp('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.css'),
   new CacheFirst({
     cacheName: 'icon-font-awesome',
   }),

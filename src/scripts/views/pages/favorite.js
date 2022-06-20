@@ -26,8 +26,9 @@ const Favorite = {
     }
 
     // display all fav restaurant
+    const totalRest = data.length;
     data.forEach((restaurant, index) => {
-      listContainer .innerHTML += restaurantItemTemplate(restaurant, index);
+      listContainer .innerHTML += restaurantItemTemplate(restaurant, index, totalRest);
     });
   },
 };

@@ -1,8 +1,9 @@
 /* eslint-disable indent */
 import CONFIG from '../../globals/config';
 
-const restaurantItemTemplate = (restaurant) => {
+const restaurantItemTemplate = (restaurant, index, lastIndex) => {
   const firstBox = (numbIndex) => numbIndex === 0 && lastIndex % 3 !== 0;
+
   return `
   <div class="card ${firstBox(index) ? 'box-ganjil' : ''}">
     <a href="#/detail/${restaurant.id}">
