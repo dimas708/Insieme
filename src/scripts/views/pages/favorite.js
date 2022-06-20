@@ -14,7 +14,7 @@ const Favorite = {
 
   async afterRender() {
     // get fav restaurant
-    const data = await FavRestaurantIdb.getAllrestaurant();
+    const data = await FavRestaurantIdb.getAllRestaurants();
 
     const listContainer = document.querySelector('#fav-restaurant');
 

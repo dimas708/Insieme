@@ -4,6 +4,7 @@ import { restaurantDetailTemplate } from '../templates/template-html';
 import LikeButtonInitiator from '../../utils/like-button-initiator';
 import PostReview from '../../utils/post-review';
 import Spinner from '../templates/spinner';
+import { initSwalError } from '../../utils/swal-initiator';
 
 const Detail = {
   async render() {
@@ -32,7 +33,7 @@ const Detail = {
     `;
   },
 
-  async afterRender() {
+  async afterRender() { 
     const url = UrlParser.parseActiveUrlWithoutCombiner();
     const detailContainer = document.querySelector('#detail-rest');
     const loading = document.querySelector('#loading');
@@ -52,9 +53,10 @@ const Detail = {
       main.style.display = 'block';
       loading.style.display = 'none';
     } catch (err) {
-      detailContainer.innerHTML = `Error: ${err}, swipe up to refresh!`;
       main.style.display = 'block';
       loading.style.display = 'none';
+      detailContainer.innerHTML = `Error: ${err.message}`;
+      initSwalError(err.message);
     }
 
     const btnSubmit = document.querySelector('#submit-review');

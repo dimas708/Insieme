@@ -12,7 +12,7 @@ const WebSocketInitiator = {
       title: 'Notif from WebSocket',
       options: {
         body: message.data,
-        icon: 'icons/icon-192x192.png',
+        icon: 'icon/icon-192x192.png',
         image: 'https://id.pinterest.com/pin/394909461081791848/',
         vibrate: [200, 100, 200],
       },
